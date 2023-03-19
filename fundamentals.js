@@ -4,10 +4,10 @@
 true + false //1
 !true //false
 6 / "3" //2
-"2" * "3" //6 
+"2" * "3" //6
 4 + 5 + "px" //9px
 "$" + 4 + 5 // $9 - my answer, but the right answer was $45
-"4" - 2 //2 
+"4" - 2 //2
 "4px" - 2 //2 - the correct answer is NaN
 " -9 " + 5 //-95
 "-9 " - 5 // -9-5 was my answer. The correct answer is -14
@@ -17,9 +17,9 @@ undefined === null //false
 " \t \n" -2 // -2
 
 //Q2 which of the below are not giving the right answer? Why are they not correct? How do we fix them?
-/* let addition = three + four should give the answer 7 but instead it gives 34 due to the values 
-assigned to the let variables three and four being in double quotes ie. any text in double quotes are strings. 
-When JS sees the + operator with strings, JS will concatenate the strings (join them together), resulting in "34" and 
+/* let addition = three + four should give the answer 7 but instead it gives 34 due to the values
+assigned to the let variables three and four being in double quotes ie. any text in double quotes are strings.
+When JS sees the + operator with strings, JS will concatenate the strings (join them together), resulting in "34" and
 not number '7'*/
 let three = "3"
 let four = "4"
@@ -47,15 +47,15 @@ function sum (a, b) { //testing powershell and node in the terminal
 }
 console.log(sum(4,5));
 //Q3
-if (0) console.log('#1 zero is true') // will not print 
-/*The if (0) console.log('#1 zero is true') statement will not print the message "#1 zero is true" 
-because the condition 0 is considered falsy in JavaScript. In JavaScript, any value that is not undefined, 
+if (0) console.log('#1 zero is true') // will not print
+/*The if (0) console.log('#1 zero is true') statement will not print the message "#1 zero is true"
+because the condition 0 is considered falsy in JavaScript. In JavaScript, any value that is not undefined,
 null, NaN, 0, "" (an empty string), or false is considered truthy. In contrast, the values undefined, null, NaN,
  0, "" (an empty string), and false are considered falsy.
 
-In the case of if (0), the value 0 is a falsy value, so the condition is considered 
-false and the code block inside the if statement is not executed. 
-Therefore, the console.log() function inside the code block will not be called and the 
+In the case of if (0), the value 0 is a falsy value, so the condition is considered
+false and the code block inside the if statement is not executed.
+Therefore, the console.log() function inside the code block will not be called and the
 message will not be printed to the console. */
 
 
@@ -69,7 +69,7 @@ let a = 2;
 let b =3;
 let result = `${a} + ${b} is `;
 
-if (a + b < 10) { 
+if (a + b < 10) {
     result += 'less than 10';
 } else {
     result: 'greater than 10';
@@ -79,8 +79,8 @@ let result2 = (a + b <10)? "less than 10" : "greater than 10";
 console.log (result2);
 console.log (result);
 
-//Q5 
-function getGreeting (name) {      // functional syntax expression 
+//Q5
+function getGreeting (name) {      // functional syntax expression
     return 'Hello ' + name + '!';
 }
 console.log(getGreeting('Janine'));
@@ -107,22 +107,22 @@ const westley = {
     const inigo = {
     firstName: 'Inigo',
     lastName: 'Montoya', //6a
-    greeting(person) { 
+    greeting(person) {
     let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName}. `; //6a
     console.log(greeting + this.getCatchPhrase(person));
     },
     getCatchPhrase(person){
     return 'Nice to meet you.';
     }
-    
+
     }
     inigo.greeting(westley)
     inigo.greeting(rugen)
 
     //Q7
     //7a
-    /*To chain the methods together, you can modify the methods to return this at the end of each method call. 
-    This will allow you to chain the methods together in a single statement.This will execute each method in order and output 
+    /*To chain the methods together, you can modify the methods to return this at the end of each method call.
+    This will allow you to chain the methods together in a single statement.This will execute each method in order and output
     the halftime score of the game. */
     const basketballGame = {
         score: 0,
@@ -141,27 +141,29 @@ const westley = {
         halfTime() {
           console.log('Halftime score is ' + this.score);
           return this;
+        },
+        //7b const basketballGame
+        fullTime() {
+           console.log("Full-time score is " + this.score);
+           return this;
         }
+        //cant declare a method outside of the consructor, also, need to put a bracket at the end of the object, and also remember to call it. :-)
       };
-      
+
       // method chaining
-      basketballGame.basket().freeThrow().freeThrow().basket().threePointer().halfTime();
-      
-    //7b const basketballGame 
-    fullTime() 
-    console.log('Full-time score is ' + this.score);
-    return this; 
-    
+      basketballGame.basket().freeThrow().freeThrow().basket().threePointer().halfTime().fullTime();
+
+
     //7c
     //7d
-    
-    //Q8
-    function printObjectProperties(obj) {   //8A
-        for (let property in obj) {
-          console.log(`${property}: ${obj[property]}`);
-        }
-      }
 
+    //Q8
+    function printObjectProperties(obj) {
+      //8A
+      for (let property in obj) {
+        console.log(`${property}: ${obj[property]}`);
+      }
+    }
       const sydney = { //8A
         name: 'Sydney',
         population: 5_121_000,
@@ -169,15 +171,14 @@ const westley = {
         founded: '26 January 1788',
         timezone: 'Australia/Sydney'
       };
-      
-      printObjectProperties(sydney); 
-    //8b 
+      printObjectProperties(sydney);
+    //8b
 
     function printobjectp2(obj) {
         for (let property in obj) {
-            console.log(`${property}: ${obj[property]}`);
+          console.log(`${property}: ${obj[property]}`);
         }
-    }
+      }
         const Palermo = { //8b
         name: 'Palermo',
         population: 670_000,
@@ -186,8 +187,8 @@ const westley = {
         timezone: 'European'
       };
       printobjectp2(Palermo);
-      
-      
+
+
       //Q9a
       let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
       let moreSports = teamSports;
@@ -226,7 +227,7 @@ function Person(name, age) {
 this.name = name;
 this.age = age;
 this.human = true;
-} 
+}
     const mySister = new Person("Marissa", 35); //10a
     const myCousin = new Person("Penny", 48); //10b
     console.log(mySister); //10c Person { name: 'Marissa', age: 35, human: true }
@@ -237,7 +238,7 @@ class PersonClass {
     this.name = name;
     this.age = age;
     this.human = true;
-    } 
+    }
 }
 const myBrother = new PersonClass("Nicholas", 40, true); //10d PersonClass { name: 'Nicholas', age: 40, human: true }
 console.log(myBrother);
@@ -251,15 +252,14 @@ function Person(name, age) {
     }
   }
 
-  class PersonClass {
-    constructor(name, age) {
-      this.name = name;
-      this.age = age;
-      this.human = true;
-    }
-  
-    canDrive() {
-      return this.age >= 16;
-    }
-  }
-  
+  // class PersonClass {
+  //   constructor(name, age) {
+  //     this.name = name;
+  //     this.age = age;
+  //     this.human = true;
+  //   }
+
+  //   canDrive() {
+  //     return this.age >= 16;
+  //   }
+  // }
