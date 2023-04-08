@@ -1,0 +1,30 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "advanced.js",
+  "dependencies": {
+    "fetch-blob": "^3.2.0",
+    "node-fetch": "^3.3.1",
+    "formdata-polyfill": "^4.0.10",
+    "web-streams-polyfill": "^3.2.1",
+    "data-uri-to-buffer": "^4.0.1",
+    "node-domexception": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanineSooThow/Javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JanineSooThow/Javascript/issues"
+  },
+  "homepage": "https://github.com/JanineSooThow/Javascript#readme",
+
+  "type": "module"
+}

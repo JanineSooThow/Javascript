@@ -232,7 +232,7 @@ return totalSalaries;
 /* This function takes in an object salaries as an argument, where the keys are the names of the people
  and the values are their salaries. It loops through each key-value pair in the object and checks if the
  salary is greater than the current highest salary. If it is, it updates the highest salary and the
- name of the top earner. After looping through all the key-value pairs, it returns the name of the top earner.
+ name of the top earner. After looping through all the key-value pairs, it returns the name of the top earner. */
 function topEarner(salaries) {
   let highestSalary = 0;
   let topEarner = "";
