@@ -574,3 +574,4 @@ fetchURLData('https://jsonplaceholder.typicode.com/todos/1')
 //Great work Janine!, just a few things to note: always name the setInterval function and clear it when you are done with it., because It will keep running in the background and will cause memory leaks. Also, you can use the spread operator to pass the arguments to the original function.
 
 //Keep being curious do not stop learning, you are doing great! :-)
+
